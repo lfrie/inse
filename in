@@ -7,11 +7,11 @@ loadkeys de
 
 cfdisk $target
 
-mkfs.fat "$target"1
-mkfs.f2fs "$target"2
-mount "$target"2 /mnt
+mkfs.fat $boot
+mkfs.f2fs $root
+mount $root /mnt
 mkdir /mnt/boot
-mount "$target"1 /mnt/boot
+mount $boot /mnt/boot
 pacstrap /mnt base linux linux-firmware nano sudo grub dhcpcd networkmanager awesome xorg
 genfstab -U /mnt >> /mnt/etc/fstab
 
