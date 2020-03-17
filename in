@@ -8,7 +8,7 @@ loadkeys de
 
 
 mkfs.fat $boot
-mkfs.f2fs $root
+mkfs.f2fs -f $root
 mount $root /mnt
 mkdir /mnt/boot
 mount $boot /mnt/boot
