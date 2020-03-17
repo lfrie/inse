@@ -26,3 +26,5 @@ passwd
 useradd -mG video,audio,wheel "$user"
 
 visudo
+
+exit
