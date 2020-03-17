@@ -4,14 +4,14 @@ target="/dev/sdc"
 
 loadkeys de
 
-cfdisk -z $target
+cfdisk $target
 
 mkfs.fat "$target"1
 mkfs.f2fs "$target"2
 mount "$target"2 /mnt
 mkdir /mnt/boot
 mount "$target"1 /mnt/boot
-pacstrap /mnt base linux linux-firmware nano sudo grub awesome xorg
+pacstrap /mnt base linux linux-firmware nano sudo grub dhcpcd networkmanager awesome xorg
 genfstab -U /mnt >> /mnt/etc/fstab
 
 cp se /mnt/
