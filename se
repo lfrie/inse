@@ -24,7 +24,8 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 passwd
 useradd -mG video,audio,wheel "$user"
+passwd $user
 
-visudo
+echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers
 
 exit
