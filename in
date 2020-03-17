@@ -1,6 +1,7 @@
 #!/bin/bash
 layout="de"
-target="/dev/sdc"
+boot="/dev/sdb1"
+root="/dev/sdb2"
 
 loadkeys de
 
