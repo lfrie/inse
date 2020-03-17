@@ -5,7 +5,7 @@ root="/dev/sdb2"
 
 loadkeys de
 
-cfdisk $target
+
 
 mkfs.fat $boot
 mkfs.f2fs $root
